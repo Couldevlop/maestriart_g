@@ -11,7 +11,13 @@
 |
 */
 
-Route::name('root_path')->get('/', 'PagesController@home');
+Route::name('root_path')->get('/', function(){
+	return view('pages.home');
+});
+
+Route::name('resgister_path')->get('/register', function(){
+	return view('pages.register');
+});
 
 //Route::name('register_path')->post('/register', 'RegisterController@store');
 Route::name('register_path')->post('/register', function(){
@@ -31,6 +37,5 @@ Route::name('register_path')->post('/register', function(){
 
     	
 ]);
-
 return "Bien enregistré";
 });

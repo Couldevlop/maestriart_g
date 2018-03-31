@@ -8,11 +8,16 @@ class PagesController extends Controller
 {
     public function home()
     {
-       return view('pages.login');
+       return view('pages.home');
     }
 
     public function about()
     {
-       return view('pages.about');
+       return view('pages.register');
+    }
+
+     public function contact()
+    {
+       return view('pages.contact');
     }
 }

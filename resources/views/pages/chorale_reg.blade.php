@@ -1,6 +1,6 @@
 @extends('layout.template')
-
-@section('contenu')
+ 
+@section('content')
 <div class="container"> 
     <div class="row">
     <div class="col-sm-offset-4 col-sm-4 col-md-8 col-md-offset-2">
@@ -11,7 +11,7 @@
                 <div class="col-md-8 col-md-offset-2 col-sm-12">
                     <div class="col-md-6">
                       
-            <form method="POST" action="{{route('register_path')}} " >
+            <form method="POST" action="{{route('register_path')}} " novalidate >
                 {{csrf_field()}}
                 
                         <div class="form-group {{$errors->has('nom') ? 'has-error' : ''}}">
@@ -27,8 +27,8 @@
                         </div>
 
                         <div class="form-group {{$errors->has('datenaiss') ? 'has-error' : ''}}">
-                            <label for="dn" class="control-label">Date de naissance</label>
-                            <input type="text" name="datenaiss" id="datenaiss" class="form-control" required="required">
+                            <label for="date_picker" class="control-label">Date de naissance</label>
+                            <input type="text" name="datenaiss" id="date_picker" class="form-control" required="required">
                             {!! $errors->first('datenaiss', '<span class="help-block">:message</span>') !!}
                         </div>
                     
@@ -39,8 +39,8 @@
                          </div>
 
                         <div class="form-group {{$errors->has('debutdirection') ? 'has-error' : ''}}">
-                            <label for="ddirect" class="control-label">Debut de direction</label>
-                            <input type="text" name="debutdirection" id="ddirect" class="form-control" required="required">
+                            <label for="date_picker1" class="control-label">Debut de direction</label>
+                            <input type="text" name="debutdirection" id="date_picker1" class="form-control" required="required">
                             {!! $errors->first('debutdirection', '<span class="help-block">:message</span>') !!}
                         </div>
 
