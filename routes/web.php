@@ -19,6 +19,10 @@ Route::name('resgister_path')->get('/register', function(){
 	return view('pages.register');
 });
 
+Route::name('chorale_path')->get('/chorale', function(){
+       return view('pages.chorale');
+	});
+
 //Route::name('register_path')->post('/register', 'RegisterController@store');
 Route::name('register_path')->post('/register', function(){
        $cdc = App\cdc::create([
