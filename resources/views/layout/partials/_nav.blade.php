@@ -15,17 +15,7 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Artisan</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planetes</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Laravel.com</a>
-              <a class="dropdown-item" href="#">Laravel.io</a>
-              <a class="dropdown-item" href="#">Laracats</a>
-              <a class="dropdown-item" href="#">Larajobs</a>
-              <a class="dropdown-item" href="#">Laranews</a>
-              <a class="dropdown-item" href="#">Larachat</a>
-            </div>
-          </li>
+          
            <li class="{{set_active_route('contact_path')}}">
             <a class="nav-link disabled" href="{{route('contact_path')}}">Contact</a>
           </li>
